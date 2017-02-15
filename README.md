@@ -1,4 +1,4 @@
-# Deictic relation task
+# Deictic relation / perspective taking task
 
 ## License
 
