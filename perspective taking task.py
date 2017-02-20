@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), Wed Feb 15 17:28:21 2017
+This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), Mon Feb 20 21:13:57 2017
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -20,7 +20,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-expName = u'perspective taking task'  # from the Builder filename that created this script
+expName = 'perspective taking task'  # from the Builder filename that created this script
 expInfo = {u'gender': u'', u'age': u'', u'participant': u''}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
 if dlg.OK == False: core.quit()  # user pressed cancel
@@ -43,8 +43,8 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 # Start Code - component code to be run before the window creation
 
 # Setup the Window
-win = visual.Window(size=(1600, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
-    monitor=u'testMonitor', color=u'black', colorSpace='rgb',
+win = visual.Window(size=(1280, 800), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+    monitor='testMonitor', color='black', colorSpace='rgb',
     blendMode='avg', useFBO=True,
     units='norm')
 # store frame rate of monitor if we can measure it successfully
@@ -57,7 +57,7 @@ else:
 # Initialize components for Routine "intro"
 introClock = core.Clock()
 intro_text = visual.TextStim(win=win, ori=0, name='intro_text',
-    text=u'This task will provide you with scenarios at the top of the screen.\n\nSometimes you\'ll be asked to answer from your own perspective, and sometimes from other perspectives.\n\nGo as slowly as you need to get as many correct as possible.\n\n** Please read each scenario as if in your own voice, where the "I" is the reader. **\n\nPress "e" for the option on the left or "i" for the option on the right.\n\nPress either key to start.',    font=u'Arial',
+    text=u'This task will provide you a scenario and question on each screen.\n\nPay close attention to changes in perspectives.\n\nYou will want to imagine the scenario and visualise the perspective change. \n\nTry to answer as accurately as possible.\n\nPress "e" for the option on the left or "i" for the option on the right.\n\nPress either one to start.',    font=u'Arial',
     pos=[0, 0], height=0.08, wrapWidth=1.9,
     color=u'white', colorSpace='rgb', opacity=1,
     depth=-1.0)
@@ -70,36 +70,36 @@ ISI = core.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI')
 trialClock = core.Clock()
 statement_label = visual.TextStim(win=win, ori=0, name='statement_label',
     text='default text',    font=u'Arial',
-    pos=[0, 0.2], height=0.1, wrapWidth=1.9,
+    pos=[0, 0.25], height=0.07, wrapWidth=1.9,
     color=u'white', colorSpace='rgb', opacity=1,
     depth=0.0)
 perspective_label = visual.TextStim(win=win, ori=0, name='perspective_label',
     text='default text',    font=u'Arial',
-    pos=[0, 0], height=0.1, wrapWidth=1.9,
+    pos=[0, 0], height=0.07, wrapWidth=1.9,
     color=u'white', colorSpace='rgb', opacity=1,
     depth=-1.0)
 question_label = visual.TextStim(win=win, ori=0, name='question_label',
     text='default text',    font=u'Arial',
-    pos=[0, -0.2], height=0.1, wrapWidth=1.9,
+    pos=[0, -0.25], height=0.07, wrapWidth=1.9,
     color=u'white', colorSpace='rgb', opacity=1,
     depth=-2.0)
 left_label = visual.TextStim(win=win, ori=0, name='left_label',
-    text='default text',    font=u'Arial',
+    text='default text',    font='Arial',
     pos=[-0.5,-0.8], height=0.1, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-4.0)
 right_label = visual.TextStim(win=win, ori=0, name='right_label',
-    text='default text',    font=u'Arial',
+    text='default text',    font='Arial',
     pos=[0.5,-0.8], height=0.1, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-5.0)
 
 # Initialize components for Routine "thanks"
 thanksClock = core.Clock()
 end_text = visual.TextStim(win=win, ori=0, name='end_text',
-    text=u'End of task.',    font=u'Arial',
+    text='End of task.',    font='Arial',
     pos=[0, -0.2], height=0.1, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=0.0)
 
 # Create some handy timers
@@ -181,7 +181,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=None,
-    trialList=data.importConditions(u'stimuli.csv'),
+    trialList=data.importConditions('stimuli.csv'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -369,12 +369,11 @@ for thisTrial in trials:
        # was no response the correct answer?!
        if str(required_key).lower() == 'none': response.corr = 1  # correct non-response
        else: response.corr = 0  # failed to respond (incorrectly)
-    # store data for thisExp (ExperimentHandler)
-    thisExp.addData('response.keys',response.keys)
-    thisExp.addData('response.corr', response.corr)
+    # store data for trials (TrialHandler)
+    trials.addData('response.keys',response.keys)
+    trials.addData('response.corr', response.corr)
     if response.keys != None:  # we had a response
-        thisExp.addData('response.rt', response.rt)
-    thisExp.nextEntry()
+        trials.addData('response.rt', response.rt)
     # the Routine "trial" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()

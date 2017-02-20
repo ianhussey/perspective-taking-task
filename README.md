@@ -10,7 +10,7 @@ This program is free software: you can redistribute it and/or modify it under th
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 ## Description
-Implementation of the McHugh et al. perspective taking protocol.
+Implementation of the McHugh et al. perspective taking protocol (abbreviated).
 
 *NB This code is still in beta - it hasn't been used it in a published article yet.*
 
@@ -30,11 +30,14 @@ Implementation of the McHugh et al. perspective taking protocol.
 If you have any issues, find bugs, or would like to see changes that you're not confident adding yourself please feel free to email me at [ian.hussey@ugent.be](mailto:ian.hussey@ugent.be). 
 
 ## To do 
-1. Check task parameters with others with experience with the task (e.g., Louise McHugh, Roger Vilardega).
-2. Swap out dummy stimuli for most up to date ones (check with Charlotte Dack).
-3. Add an R processing script to do data processing.
+1. Add an R processing script to do data processing.
 
 ## Changelog
 ### 0.1
 
 - Initial upload
+
+### 0.2
+
+- Implemented correct stimuli
+
