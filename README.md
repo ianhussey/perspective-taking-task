@@ -31,13 +31,13 @@ If you have any issues, find bugs, or would like to see changes that you're not 
 
 ## To do 
 1. Add an R processing script to do data processing.
+2. cross check the answers are correct 
 
 ## Changelog
-### 0.1
-
-- Initial upload
-
 ### 0.2
 
 - Implemented correct stimuli
 
+### 0.1
+
+- Initial upload
