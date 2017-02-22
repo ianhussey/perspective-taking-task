@@ -23,8 +23,14 @@ Implementation of the McHugh et al. perspective taking protocol (abbreviated).
   - You might be able to use more recent versions, but will probably need to run the `.py` file rather than the `.psyexp` file.
 
 
+## Usage
+
+Press escape to quit the task at any time.
+
+Press return at the end of the task to exit it correctly.
+
 ## Output
-`.psydat`, `.csv` and `.log` files are produced for each participant. The `.csv` file alone is sufficient to most analyses. To my understanding, the format of the `.csv` output files are Tidy Data compliant (Wickham, 2014) and therefore easy to analyse (e.g., in R) with little to no processing needed.
+`.psydat`, `.csv` and `.log` files are produced for each participant. The `.csv` file alone is sufficient to most analyses. each row represents a trial, and contains both accuracy and RT data. To my understanding, the format of the `.csv` output files are Tidy Data compliant (Wickham, 2014) and therefore easy to analyse (e.g., in R) with little to no processing needed.
 
 ## Issues 
 If you have any issues, find bugs, or would like to see changes that you're not confident adding yourself please feel free to email me at [ian.hussey@ugent.be](mailto:ian.hussey@ugent.be). 
